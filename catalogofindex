@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: upgradetest
+  namespace: kaka
+spec:
+  displayName: Upgrade Operators
+  image: quay.io/olmqe/upgradeindex-index:v0.1
+  publisher: jfan
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 1m
